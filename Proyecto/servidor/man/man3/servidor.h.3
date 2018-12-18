@@ -1,0 +1,226 @@
+.TH "servidor.h" 3 "Mon Dec 17 2018" "Proyecto II - Servidor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+servidor.h \- Definiciones/Mensajes del servidor y el cliente\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <sys/time\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+\fC#include <pthread\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_POK\fP   151"
+.br
+.ti -1c
+.RI "#define \fBSERV_PORT\fP   9999"
+.br
+.ti -1c
+.RI "#define \fBBUFF_SIZE\fP   2049"
+.br
+.ti -1c
+.RI "#define \fBASK_POK\fP   10"
+.br
+.ti -1c
+.RI "#define \fBBALL\fP   11"
+.br
+.ti -1c
+.RI "#define \fBROCK\fP   12"
+.br
+.ti -1c
+.RI "#define \fBBAIT\fP   13"
+.br
+.ti -1c
+.RI "#define \fBRUN\fP   14"
+.br
+.ti -1c
+.RI "#define \fBTRY_USER\fP   15"
+.br
+.ti -1c
+.RI "#define \fBUSER\fP   20"
+.br
+.ti -1c
+.RI "#define \fBENCOUNTER\fP   21"
+.br
+.ti -1c
+.RI "#define \fBESCAPE\fP   22"
+.br
+.ti -1c
+.RI "#define \fBSUCCESS\fP   23"
+.br
+.ti -1c
+.RI "#define \fBNO_TRIES\fP   24"
+.br
+.ti -1c
+.RI "#define \fBPOKEDEX\fP   25"
+.br
+.ti -1c
+.RI "#define \fBOK\fP   30"
+.br
+.ti -1c
+.RI "#define \fBNO\fP   31"
+.br
+.ti -1c
+.RI "#define \fBEND_SESSION\fP   32"
+.br
+.ti -1c
+.RI "#define \fBTIMEOUT\fP   40"
+.br
+.ti -1c
+.RI "#define \fBNO_USER\fP   41"
+.br
+.ti -1c
+.RI "#define \fBERROR_CODE\fP   42"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror\fP (char *errorMessage)"
+.br
+.RI "Función para el manejo de errores\&. "
+.ti -1c
+.RI "void * \fBhandle_client\fP (void *vargp)"
+.br
+.RI "Funcion que atiende al cliente\&. "
+.ti -1c
+.RI "void * \fBerr_send\fP (int clntfd, char code)"
+.br
+.RI "Envia un codigo de error al cliente\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definiciones/Mensajes del servidor y el cliente\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+11 Diciembre 2018 Se define la tabla de códigos del cliente y servidor, asi como de uso general y de error\&. Ademas se definen funciones adicionales para el servidor\&. 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASK_POK   10"
+(1B op) Pide por un Pokemon 
+.SS "#define BAIT   13"
+(1B op) Tira comida al Pokemon 
+.SS "#define BALL   11"
+(1B op) Tira pokebola al Pokemon 
+.SS "#define BUFF_SIZE   2049"
+Tamaño de Buffer 
+.SS "#define ENCOUNTER   21"
+(1B op, 1B id, 1B pb) Pokemon id con pb 
+.SS "#define END_SESSION   32"
+(1B op) Termino de Sesion 
+.SS "#define ERROR_CODE   42"
+(1B op) El codigo no se esperaba 
+.SS "#define ESCAPE   22"
+(1B op) El Pokemon se escapo 
+.SS "#define MAX_POK   151"
+Pokemon máximos 
+.SS "#define NO   31"
+(1B op) Rechazar 
+.SS "#define NO_TRIES   24"
+(1B op) Ya no hay mas pokebolas 
+.SS "#define NO_USER   41"
+(1B op) No existe el usuario 
+.SS "#define OK   30"
+(1B op) Aceptar 
+.SS "#define POKEDEX   25"
+(1B op, 151B pk) Se envia a pokedex 
+.SS "#define ROCK   12"
+(1B op) Tira piedra al Pokemon 
+.SS "#define RUN   14"
+(1B op) Escapa del encuentro 
+.SS "#define SERV_PORT   9999"
+Puerto para conexion 
+.SS "#define SUCCESS   23"
+(1B op) El Pokemon se atrapo 
+.SS "#define TIMEOUT   40"
+(1B op) Hubo un timeout 
+.SS "#define TRY_USER   15"
+(1B op,nB us) Conectar con el usuario us 
+.SS "#define USER   20"
+(1B op) Si existe el usuario 
+.SH "Function Documentation"
+.PP 
+.SS "void* err_send (int clntfd, char code)"
+
+.PP
+Envia un codigo de error al cliente\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclntfd\fP Descriptor de archivo del cliente 
+.br
+\fIcode\fP El codigo de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL? 
+.RE
+.PP
+
+.SS "void error (char * errorMessage)"
+
+.PP
+Función para el manejo de errores\&. Muestra un error del lado del servidor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIerrorMessage\fP El mensaje de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Void 
+.RE
+.PP
+
+.SS "void* handle_client (void * vargp)"
+
+.PP
+Funcion que atiende al cliente\&. Corrobora que el usuario tenga su archivo correspondiente, obtiene los datos y comienza el ciclo de captura\&. Se validan las acciones del usuario, asi como si se capturan o no los pokemon, tambien se calcula si los pokemon escapan\&. (el conteo de las pokebolas igual)
+.PP
+Al final se pregunta si se quiere ver el pokedex del usuario en consola y se termina el thread\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvargp\fP Descriptor de archivo (desde la creación del thread) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL? 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Proyecto II - Servidor from the source code\&.

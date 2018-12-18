@@ -1,0 +1,68 @@
+\hypertarget{servidor_8c}{}\section{servidor.\+c File Reference}
+\label{servidor_8c}\index{servidor.\+c@{servidor.\+c}}
+
+
+Programa del Servidor.  
+
+
+{\ttfamily \#include \char`\"{}servidor.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{servidor_8c_a83c22d03f5938475f52786262898727f}{error}} (char $\ast$error\+Message)
+\begin{DoxyCompactList}\small\item\em Función para el manejo de errores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{servidor_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Función para establecer conexion con los clientes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa del Servidor. 
+
+\begin{DoxyDate}{Date}
+11 Diciembre 2018 Se inicializa el socket, se define la dirección del puerto, y se crean los threads correspondientes a los clientes que piden conexion. 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{servidor_8c_a83c22d03f5938475f52786262898727f}\label{servidor_8c_a83c22d03f5938475f52786262898727f}} 
+\index{servidor.\+c@{servidor.\+c}!error@{error}}
+\index{error@{error}!servidor.\+c@{servidor.\+c}}
+\subsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{char $\ast$}]{error\+Message }\end{DoxyParamCaption})}
+
+
+
+Función para el manejo de errores. 
+
+Muestra un error del lado del servidor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error\+Message} & El mensaje de error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{servidor_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{servidor_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{servidor.\+c@{servidor.\+c}!main@{main}}
+\index{main@{main}!servidor.\+c@{servidor.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Función para establecer conexion con los clientes. 
+
+Aqui se crea/inicia el socket para escuchar peticiones (ciclo infinito), cuendo se acepta un cliente, se crea un thread para poder tener varias conexiones a la vez y se empieza a atender al cliente.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Numero de argumentos \\
+\hline
+{\em argv} & Argumentos en arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+... 
+\end{DoxyReturn}

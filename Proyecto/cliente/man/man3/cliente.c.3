@@ -1,0 +1,134 @@
+.TH "cliente.c" 3 "Mon Dec 17 2018" "Proyecto II - Cliente" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cliente.c \- Programa del Cliente\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'cliente\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBhowto\fP ()"
+.br
+.RI "Uso del programa\&. "
+.ti -1c
+.RI "void \fBsend_error\fP (int sockfd, char code)"
+.br
+.RI "Notifica al usuario cuando sucede algun error\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.RI "Función para comunicarse con el Servidor\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBpokedex\fP [\fBMAX_POK\fP]"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Programa del Cliente\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+11 Diciembre 2018 Se validan los datos del usuario, direcciones IP del servidor y el puerto, despues se empieza la conexion al servidor (si se puede claro\&.\&.\&.) 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int howto ()"
+
+.PP
+Uso del programa\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\&.\&.\&.
+.RE
+.PP
+Imprime el uso del programa en caso de ser necesario 
+.SS "int main (int argc, char ** argv)"
+
+.PP
+Función para comunicarse con el Servidor\&. Aqui se validan los datos antes de intentar una conexion al servidor, en caso de error, se manda mensaje al usuario, debe haber 4 argumentos totales, si no los hay, se manda el uso del programa\&. Si se tiene exito, se comienza la comunicación al servidor por medio de un menu\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargc\fP Numero de argumentos 
+.br
+\fIargv\fP Argumentos en arreglo 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\&.\&.\&. 
+.RE
+.PP
+
+.SS "void send_error (int clntfd, char code)"
+
+.PP
+Notifica al usuario cuando sucede algun error\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsockfd\fP Descriptor de Archivo 
+.br
+\fIcode\fP Codigo de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Void 
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "const char* pokedex[\fBMAX_POK\fP]"
+\fBInitial value:\fP
+.PP
+.nf
+=
+  {
+   "Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard",
+   "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree",
+   "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", 
+   "Raticate", "Spearow", "Fearow", "Ekans", "Arbok","Pikachu", "Raichu", 
+   "Sandshdrew", "Sandslash", "Nidoran(F)", "Nidorina", "Nidoqueen",
+   "Nidoran(M)", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix",
+   "Ninetales", "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", "Oddish",
+   "Gloom", "Vileplume", "Paras", "Parasect", "Venonat", "Venomoth", "Diglett",
+   "Dugtrio", "Meowth", "Persian", "Psyduck", "Golduck", "Mankey", "Primeape",
+   "Growlite", "Arcanine", "Poliwag", "Poliwhirl", "Poliwrath", "Abra",
+   "Kadabra", "Alakazam", "Machop", "Machoke", "Machamp", "Bellsprout",
+   "Weepinbell", "Victreebel", "Tentacool", "Tentacruel", "Geodude", "Graveler",
+   "Golem", "Ponyta", "Rapidash", "Slowpoke", "Slowbro", "Magnemite",
+   "Magneton", "Farfetch'd", "Doduo", "Dodrio", "Seel", "Dewgong", "Grimer",
+   "Muk", "Shellder", "Cloyster", "Gastly", "Haunter", "Gengar", "Onix",
+   "Drowzee", "Hypno", "Krabby", "Kingler", "Voltorb", "Electrode", "Exeggcute",
+   "Exeggutor", "Cubone", "Marowak", "Hitmonlee", "Hitmonchan", "Lickitung",
+   "Koffing", "Weezing", "Rhyhorn", "Rhydon", "Chansey", "Tangela",
+   "Kangaskhan", "Horsea", "Seedra", "Goldeen", "Seaking", "Staryu", "Starmie", 
+   "Mr\&. Mime", "Scyther", "Jynx", "Electabuzz", "Magmar", "Pinsir", "Tauros", 
+   "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee", "Vaporeon", "Jolteon", 
+   "Flareon", "Porygon", "Omanyte", "Omastar", "Kabuto", "Kabutops",
+   "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres", "Dratini",
+   "Dragonair", "Dragonite", "Mewtwo", "Mew"
+  }
+.fi
+Pokedex Total (arreglo) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Proyecto II - Cliente from the source code\&.

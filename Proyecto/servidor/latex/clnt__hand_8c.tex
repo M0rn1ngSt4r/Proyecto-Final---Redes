@@ -1,0 +1,68 @@
+\hypertarget{clnt__hand_8c}{}\section{clnt\+\_\+hand.\+c File Reference}
+\label{clnt__hand_8c}\index{clnt\+\_\+hand.\+c@{clnt\+\_\+hand.\+c}}
+
+
+Definiciones/\+Mensajes del servidor y el cliente.  
+
+
+{\ttfamily \#include \char`\"{}servidor.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{clnt__hand_8c_a5f4dfa29e108e42d6845e5db2ade7e19}{err\+\_\+send}} (int clntfd, char code)
+\begin{DoxyCompactList}\small\item\em Envia un codigo de error al cliente. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{clnt__hand_8c_ac0c1ece49d1ba30e6f54ddbaab5078cb}{handle\+\_\+client}} (void $\ast$vargp)
+\begin{DoxyCompactList}\small\item\em Funcion que atiende al cliente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definiciones/\+Mensajes del servidor y el cliente. 
+
+\begin{DoxyDate}{Date}
+11 Diciembre 2018 Aqui se atienden las peticiones del cliente. 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{clnt__hand_8c_a5f4dfa29e108e42d6845e5db2ade7e19}\label{clnt__hand_8c_a5f4dfa29e108e42d6845e5db2ade7e19}} 
+\index{clnt\+\_\+hand.\+c@{clnt\+\_\+hand.\+c}!err\+\_\+send@{err\+\_\+send}}
+\index{err\+\_\+send@{err\+\_\+send}!clnt\+\_\+hand.\+c@{clnt\+\_\+hand.\+c}}
+\subsubsection{\texorpdfstring{err\+\_\+send()}{err\_send()}}
+{\footnotesize\ttfamily void$\ast$ err\+\_\+send (\begin{DoxyParamCaption}\item[{int}]{clntfd,  }\item[{char}]{code }\end{DoxyParamCaption})}
+
+
+
+Envia un codigo de error al cliente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clntfd} & Descriptor de archivo del cliente \\
+\hline
+{\em code} & El codigo de error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL? 
+\end{DoxyReturn}
+\mbox{\Hypertarget{clnt__hand_8c_ac0c1ece49d1ba30e6f54ddbaab5078cb}\label{clnt__hand_8c_ac0c1ece49d1ba30e6f54ddbaab5078cb}} 
+\index{clnt\+\_\+hand.\+c@{clnt\+\_\+hand.\+c}!handle\+\_\+client@{handle\+\_\+client}}
+\index{handle\+\_\+client@{handle\+\_\+client}!clnt\+\_\+hand.\+c@{clnt\+\_\+hand.\+c}}
+\subsubsection{\texorpdfstring{handle\+\_\+client()}{handle\_client()}}
+{\footnotesize\ttfamily void$\ast$ handle\+\_\+client (\begin{DoxyParamCaption}\item[{void $\ast$}]{vargp }\end{DoxyParamCaption})}
+
+
+
+Funcion que atiende al cliente. 
+
+Corrobora que el usuario tenga su archivo correspondiente, obtiene los datos y comienza el ciclo de captura. Se validan las acciones del usuario, asi como si se capturan o no los pokemon, tambien se calcula si los pokemon escapan. (el conteo de las pokebolas igual)
+
+Al final se pregunta si se quiere ver el pokedex del usuario en consola y se termina el thread.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vargp} & Descriptor de archivo (desde la creación del thread) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+N\+U\+LL? 
+\end{DoxyReturn}

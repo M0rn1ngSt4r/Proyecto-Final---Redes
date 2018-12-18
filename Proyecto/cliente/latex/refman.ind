@@ -1,0 +1,121 @@
+\begin{theindex}
+
+  \item {A\+S\+K\+\_\+\+P\+OK}
+    \subitem {cliente.\+h}, \hyperpage{6}
+
+  \indexspace
+
+  \item {B\+A\+IT}
+    \subitem {cliente.\+h}, \hyperpage{6}
+  \item {B\+A\+LL}
+    \subitem {cliente.\+h}, \hyperpage{7}
+  \item {B\+U\+F\+F\+\_\+\+S\+I\+ZE}
+    \subitem {cliente.\+h}, \hyperpage{7}
+
+  \indexspace
+
+  \item {cliente.\+c}, \hyperpage{3}
+    \subitem {howto}, \hyperpage{3}
+    \subitem {main}, \hyperpage{4}
+    \subitem {pokedex}, \hyperpage{5}
+    \subitem {send\+\_\+error}, \hyperpage{4}
+  \item {cliente.\+h}, \hyperpage{5}
+    \subitem {A\+S\+K\+\_\+\+P\+OK}, \hyperpage{6}
+    \subitem {B\+A\+IT}, \hyperpage{6}
+    \subitem {B\+A\+LL}, \hyperpage{7}
+    \subitem {B\+U\+F\+F\+\_\+\+S\+I\+ZE}, \hyperpage{7}
+    \subitem {E\+N\+C\+O\+U\+N\+T\+ER}, \hyperpage{7}
+    \subitem {E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}, \hyperpage{7}
+    \subitem {E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}, \hyperpage{7}
+    \subitem {E\+S\+C\+A\+PE}, \hyperpage{7}
+    \subitem {howto}, \hyperpage{9}
+    \subitem {M\+A\+X\+\_\+\+P\+OK}, \hyperpage{7}
+    \subitem {N\+O\+\_\+\+T\+R\+I\+ES}, \hyperpage{8}
+    \subitem {N\+O\+\_\+\+U\+S\+ER}, \hyperpage{8}
+    \subitem {NO}, \hyperpage{7}
+    \subitem {OK}, \hyperpage{8}
+    \subitem {P\+O\+K\+E\+D\+EX}, \hyperpage{8}
+    \subitem {R\+O\+CK}, \hyperpage{8}
+    \subitem {R\+UN}, \hyperpage{8}
+    \subitem {S\+E\+R\+V\+\_\+\+P\+O\+RT}, \hyperpage{8}
+    \subitem {S\+U\+C\+C\+E\+SS}, \hyperpage{8}
+    \subitem {send\+\_\+error}, \hyperpage{9}
+    \subitem {T\+I\+M\+E\+O\+UT}, \hyperpage{9}
+    \subitem {T\+R\+Y\+\_\+\+U\+S\+ER}, \hyperpage{9}
+    \subitem {U\+S\+ER}, \hyperpage{9}
+
+  \indexspace
+
+  \item {E\+N\+C\+O\+U\+N\+T\+ER}
+    \subitem {cliente.\+h}, \hyperpage{7}
+  \item {E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}
+    \subitem {cliente.\+h}, \hyperpage{7}
+  \item {E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}
+    \subitem {cliente.\+h}, \hyperpage{7}
+  \item {E\+S\+C\+A\+PE}
+    \subitem {cliente.\+h}, \hyperpage{7}
+
+  \indexspace
+
+  \item {howto}
+    \subitem {cliente.\+c}, \hyperpage{3}
+    \subitem {cliente.\+h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {M\+A\+X\+\_\+\+P\+OK}
+    \subitem {cliente.\+h}, \hyperpage{7}
+  \item {main}
+    \subitem {cliente.\+c}, \hyperpage{4}
+
+  \indexspace
+
+  \item {N\+O\+\_\+\+T\+R\+I\+ES}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {N\+O\+\_\+\+U\+S\+ER}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {NO}
+    \subitem {cliente.\+h}, \hyperpage{7}
+
+  \indexspace
+
+  \item {OK}
+    \subitem {cliente.\+h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {P\+O\+K\+E\+D\+EX}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {pokedex}
+    \subitem {cliente.\+c}, \hyperpage{5}
+
+  \indexspace
+
+  \item {R\+O\+CK}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {R\+UN}
+    \subitem {cliente.\+h}, \hyperpage{8}
+
+  \indexspace
+
+  \item {S\+E\+R\+V\+\_\+\+P\+O\+RT}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {S\+U\+C\+C\+E\+SS}
+    \subitem {cliente.\+h}, \hyperpage{8}
+  \item {send\+\_\+error}
+    \subitem {cliente.\+c}, \hyperpage{4}
+    \subitem {cliente.\+h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {T\+I\+M\+E\+O\+UT}
+    \subitem {cliente.\+h}, \hyperpage{9}
+  \item {T\+R\+Y\+\_\+\+U\+S\+ER}
+    \subitem {cliente.\+h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {U\+S\+ER}
+    \subitem {cliente.\+h}, \hyperpage{9}
+
+\end{theindex}

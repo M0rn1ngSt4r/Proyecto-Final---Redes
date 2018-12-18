@@ -1,0 +1,128 @@
+\hypertarget{cliente_8c}{}\section{cliente.\+c File Reference}
+\label{cliente_8c}\index{cliente.\+c@{cliente.\+c}}
+
+
+Programa del Cliente.  
+
+
+{\ttfamily \#include \char`\"{}cliente.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cliente_8c_ad21ad484f18ec01d3365ce2b84d908df}{howto}} ()
+\begin{DoxyCompactList}\small\item\em Uso del programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cliente_8c_a49d70aa9af350f7894ecea1f72889268}{send\+\_\+error}} (int sockfd, char code)
+\begin{DoxyCompactList}\small\item\em Notifica al usuario cuando sucede algun error. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{cliente_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em Función para comunicarse con el Servidor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{cliente_8c_ac1c00839c076c08505b06c688db45fc6}{pokedex}} \mbox{[}\mbox{\hyperlink{cliente_8h_acb4b2d2375bcb113f12579d5752ac972}{M\+A\+X\+\_\+\+P\+OK}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Programa del Cliente. 
+
+\begin{DoxyDate}{Date}
+11 Diciembre 2018 Se validan los datos del usuario, direcciones IP del servidor y el puerto, despues se empieza la conexion al servidor (si se puede claro...) 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cliente_8c_ad21ad484f18ec01d3365ce2b84d908df}\label{cliente_8c_ad21ad484f18ec01d3365ce2b84d908df}} 
+\index{cliente.\+c@{cliente.\+c}!howto@{howto}}
+\index{howto@{howto}!cliente.\+c@{cliente.\+c}}
+\subsubsection{\texorpdfstring{howto()}{howto()}}
+{\footnotesize\ttfamily int howto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uso del programa. 
+
+\begin{DoxyReturn}{Returns}
+...
+\end{DoxyReturn}
+Imprime el uso del programa en caso de ser necesario \mbox{\Hypertarget{cliente_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{cliente_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{cliente.\+c@{cliente.\+c}!main@{main}}
+\index{main@{main}!cliente.\+c@{cliente.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+Función para comunicarse con el Servidor. 
+
+Aqui se validan los datos antes de intentar una conexion al servidor, en caso de error, se manda mensaje al usuario, debe haber 4 argumentos totales, si no los hay, se manda el uso del programa. Si se tiene exito, se comienza la comunicación al servidor por medio de un menu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Numero de argumentos \\
+\hline
+{\em argv} & Argumentos en arreglo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+... 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cliente_8c_a49d70aa9af350f7894ecea1f72889268}\label{cliente_8c_a49d70aa9af350f7894ecea1f72889268}} 
+\index{cliente.\+c@{cliente.\+c}!send\+\_\+error@{send\+\_\+error}}
+\index{send\+\_\+error@{send\+\_\+error}!cliente.\+c@{cliente.\+c}}
+\subsubsection{\texorpdfstring{send\+\_\+error()}{send\_error()}}
+{\footnotesize\ttfamily void send\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clntfd,  }\item[{char}]{code }\end{DoxyParamCaption})}
+
+
+
+Notifica al usuario cuando sucede algun error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd} & Descriptor de Archivo \\
+\hline
+{\em code} & Codigo de error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{cliente_8c_ac1c00839c076c08505b06c688db45fc6}\label{cliente_8c_ac1c00839c076c08505b06c688db45fc6}} 
+\index{cliente.\+c@{cliente.\+c}!pokedex@{pokedex}}
+\index{pokedex@{pokedex}!cliente.\+c@{cliente.\+c}}
+\subsubsection{\texorpdfstring{pokedex}{pokedex}}
+{\footnotesize\ttfamily const char$\ast$ pokedex\mbox{[}\mbox{\hyperlink{cliente_8h_acb4b2d2375bcb113f12579d5752ac972}{M\+A\+X\+\_\+\+P\+OK}}\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+  \{
+   \textcolor{stringliteral}{"Bulbasaur"}, \textcolor{stringliteral}{"Ivysaur"}, \textcolor{stringliteral}{"Venusaur"}, \textcolor{stringliteral}{"Charmander"}, \textcolor{stringliteral}{"Charmeleon"}, \textcolor{stringliteral}{"Charizard"},
+   \textcolor{stringliteral}{"Squirtle"}, \textcolor{stringliteral}{"Wartortle"}, \textcolor{stringliteral}{"Blastoise"}, \textcolor{stringliteral}{"Caterpie"}, \textcolor{stringliteral}{"Metapod"}, \textcolor{stringliteral}{"Butterfree"},
+   \textcolor{stringliteral}{"Weedle"}, \textcolor{stringliteral}{"Kakuna"}, \textcolor{stringliteral}{"Beedrill"}, \textcolor{stringliteral}{"Pidgey"}, \textcolor{stringliteral}{"Pidgeotto"}, \textcolor{stringliteral}{"Pidgeot"}, \textcolor{stringliteral}{"Rattata"}, 
+   \textcolor{stringliteral}{"Raticate"}, \textcolor{stringliteral}{"Spearow"}, \textcolor{stringliteral}{"Fearow"}, \textcolor{stringliteral}{"Ekans"}, \textcolor{stringliteral}{"Arbok"},\textcolor{stringliteral}{"Pikachu"}, \textcolor{stringliteral}{"Raichu"}, 
+   \textcolor{stringliteral}{"Sandshdrew"}, \textcolor{stringliteral}{"Sandslash"}, \textcolor{stringliteral}{"Nidoran(F)"}, \textcolor{stringliteral}{"Nidorina"}, \textcolor{stringliteral}{"Nidoqueen"},
+   \textcolor{stringliteral}{"Nidoran(M)"}, \textcolor{stringliteral}{"Nidorino"}, \textcolor{stringliteral}{"Nidoking"}, \textcolor{stringliteral}{"Clefairy"}, \textcolor{stringliteral}{"Clefable"}, \textcolor{stringliteral}{"Vulpix"},
+   \textcolor{stringliteral}{"Ninetales"}, \textcolor{stringliteral}{"Jigglypuff"}, \textcolor{stringliteral}{"Wigglytuff"}, \textcolor{stringliteral}{"Zubat"}, \textcolor{stringliteral}{"Golbat"}, \textcolor{stringliteral}{"Oddish"},
+   \textcolor{stringliteral}{"Gloom"}, \textcolor{stringliteral}{"Vileplume"}, \textcolor{stringliteral}{"Paras"}, \textcolor{stringliteral}{"Parasect"}, \textcolor{stringliteral}{"Venonat"}, \textcolor{stringliteral}{"Venomoth"}, \textcolor{stringliteral}{"Diglett"},
+   \textcolor{stringliteral}{"Dugtrio"}, \textcolor{stringliteral}{"Meowth"}, \textcolor{stringliteral}{"Persian"}, \textcolor{stringliteral}{"Psyduck"}, \textcolor{stringliteral}{"Golduck"}, \textcolor{stringliteral}{"Mankey"}, \textcolor{stringliteral}{"Primeape"},
+   \textcolor{stringliteral}{"Growlite"}, \textcolor{stringliteral}{"Arcanine"}, \textcolor{stringliteral}{"Poliwag"}, \textcolor{stringliteral}{"Poliwhirl"}, \textcolor{stringliteral}{"Poliwrath"}, \textcolor{stringliteral}{"Abra"},
+   \textcolor{stringliteral}{"Kadabra"}, \textcolor{stringliteral}{"Alakazam"}, \textcolor{stringliteral}{"Machop"}, \textcolor{stringliteral}{"Machoke"}, \textcolor{stringliteral}{"Machamp"}, \textcolor{stringliteral}{"Bellsprout"},
+   \textcolor{stringliteral}{"Weepinbell"}, \textcolor{stringliteral}{"Victreebel"}, \textcolor{stringliteral}{"Tentacool"}, \textcolor{stringliteral}{"Tentacruel"}, \textcolor{stringliteral}{"Geodude"}, \textcolor{stringliteral}{"Graveler"},
+   \textcolor{stringliteral}{"Golem"}, \textcolor{stringliteral}{"Ponyta"}, \textcolor{stringliteral}{"Rapidash"}, \textcolor{stringliteral}{"Slowpoke"}, \textcolor{stringliteral}{"Slowbro"}, \textcolor{stringliteral}{"Magnemite"},
+   \textcolor{stringliteral}{"Magneton"}, \textcolor{stringliteral}{"Farfetch'd"}, \textcolor{stringliteral}{"Doduo"}, \textcolor{stringliteral}{"Dodrio"}, \textcolor{stringliteral}{"Seel"}, \textcolor{stringliteral}{"Dewgong"}, \textcolor{stringliteral}{"Grimer"},
+   \textcolor{stringliteral}{"Muk"}, \textcolor{stringliteral}{"Shellder"}, \textcolor{stringliteral}{"Cloyster"}, \textcolor{stringliteral}{"Gastly"}, \textcolor{stringliteral}{"Haunter"}, \textcolor{stringliteral}{"Gengar"}, \textcolor{stringliteral}{"Onix"},
+   \textcolor{stringliteral}{"Drowzee"}, \textcolor{stringliteral}{"Hypno"}, \textcolor{stringliteral}{"Krabby"}, \textcolor{stringliteral}{"Kingler"}, \textcolor{stringliteral}{"Voltorb"}, \textcolor{stringliteral}{"Electrode"}, \textcolor{stringliteral}{"Exeggcute"},
+   \textcolor{stringliteral}{"Exeggutor"}, \textcolor{stringliteral}{"Cubone"}, \textcolor{stringliteral}{"Marowak"}, \textcolor{stringliteral}{"Hitmonlee"}, \textcolor{stringliteral}{"Hitmonchan"}, \textcolor{stringliteral}{"Lickitung"},
+   \textcolor{stringliteral}{"Koffing"}, \textcolor{stringliteral}{"Weezing"}, \textcolor{stringliteral}{"Rhyhorn"}, \textcolor{stringliteral}{"Rhydon"}, \textcolor{stringliteral}{"Chansey"}, \textcolor{stringliteral}{"Tangela"},
+   \textcolor{stringliteral}{"Kangaskhan"}, \textcolor{stringliteral}{"Horsea"}, \textcolor{stringliteral}{"Seedra"}, \textcolor{stringliteral}{"Goldeen"}, \textcolor{stringliteral}{"Seaking"}, \textcolor{stringliteral}{"Staryu"}, \textcolor{stringliteral}{"Starmie"}, 
+   \textcolor{stringliteral}{"Mr. Mime"}, \textcolor{stringliteral}{"Scyther"}, \textcolor{stringliteral}{"Jynx"}, \textcolor{stringliteral}{"Electabuzz"}, \textcolor{stringliteral}{"Magmar"}, \textcolor{stringliteral}{"Pinsir"}, \textcolor{stringliteral}{"Tauros"}, 
+   \textcolor{stringliteral}{"Magikarp"}, \textcolor{stringliteral}{"Gyarados"}, \textcolor{stringliteral}{"Lapras"}, \textcolor{stringliteral}{"Ditto"}, \textcolor{stringliteral}{"Eevee"}, \textcolor{stringliteral}{"Vaporeon"}, \textcolor{stringliteral}{"Jolteon"}, 
+   \textcolor{stringliteral}{"Flareon"}, \textcolor{stringliteral}{"Porygon"}, \textcolor{stringliteral}{"Omanyte"}, \textcolor{stringliteral}{"Omastar"}, \textcolor{stringliteral}{"Kabuto"}, \textcolor{stringliteral}{"Kabutops"},
+   \textcolor{stringliteral}{"Aerodactyl"}, \textcolor{stringliteral}{"Snorlax"}, \textcolor{stringliteral}{"Articuno"}, \textcolor{stringliteral}{"Zapdos"}, \textcolor{stringliteral}{"Moltres"}, \textcolor{stringliteral}{"Dratini"},
+   \textcolor{stringliteral}{"Dragonair"}, \textcolor{stringliteral}{"Dragonite"}, \textcolor{stringliteral}{"Mewtwo"}, \textcolor{stringliteral}{"Mew"}
+  \}
+\end{DoxyCode}
+Pokedex Total (arreglo) 

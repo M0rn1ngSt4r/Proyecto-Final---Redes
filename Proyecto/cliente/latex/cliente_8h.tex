@@ -1,0 +1,243 @@
+\hypertarget{cliente_8h}{}\section{cliente.\+h File Reference}
+\label{cliente_8h}\index{cliente.\+h@{cliente.\+h}}
+
+
+Definiciones/\+Mensajes del servidor y el cliente.  
+
+
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netdb.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cliente_8h_acb4b2d2375bcb113f12579d5752ac972}{M\+A\+X\+\_\+\+P\+OK}}~151
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a1692d123e0b7874155e61ae5bf1dbafa}{S\+E\+R\+V\+\_\+\+P\+O\+RT}}~9999
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a6c7cd32e1bac137f05e4a752b4ad10af}{B\+U\+F\+F\+\_\+\+S\+I\+ZE}}~2049
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a89d2cc07bcfd585406a9b72e5bc5cc2e}{A\+S\+K\+\_\+\+P\+OK}}~10
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a56509f77cfe531ba3c43f75ad9fde5f0}{B\+A\+LL}}~11
+\item 
+\#define \mbox{\hyperlink{cliente_8h_ac5cc41d68017af4d6facb861094b07d4}{R\+O\+CK}}~12
+\item 
+\#define \mbox{\hyperlink{cliente_8h_aa23e0976377944da5580519b4da13033}{B\+A\+IT}}~13
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a35f69a612b07bbf1de53bbbd8d877c09}{R\+UN}}~14
+\item 
+\#define \mbox{\hyperlink{cliente_8h_aceb62ec51949c10ff71a416925bf1e5f}{T\+R\+Y\+\_\+\+U\+S\+ER}}~15
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a8bfbbf31b7d3c07215440d18a064b7f4}{U\+S\+ER}}~20
+\item 
+\#define \mbox{\hyperlink{cliente_8h_ae0ff0bc911a0874c1ad8e2cc457a86a9}{E\+N\+C\+O\+U\+N\+T\+ER}}~21
+\item 
+\#define \mbox{\hyperlink{cliente_8h_afe4b0e625372cd38ec60150d6f5594b8}{E\+S\+C\+A\+PE}}~22
+\item 
+\#define \mbox{\hyperlink{cliente_8h_aa90cac659d18e8ef6294c7ae337f6b58}{S\+U\+C\+C\+E\+SS}}~23
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a8cb7f6dbcbac6fa53e6c935d8a9109f8}{N\+O\+\_\+\+T\+R\+I\+ES}}~24
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a64f97b5cc35bcfe8119e5fecedb659a6}{P\+O\+K\+E\+D\+EX}}~25
+\item 
+\#define \mbox{\hyperlink{cliente_8h_aba51915c87d64af47fb1cc59348961c9}{OK}}~30
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a996bde01ecac342918f0a2c4e7ce7bd5}{NO}}~31
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a7b028e7a92b26b4ac9251017cab404b2}{E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}}~32
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT}}~40
+\item 
+\#define \mbox{\hyperlink{cliente_8h_a0298d3a0b83fab9375b4df8d5e7e962a}{N\+O\+\_\+\+U\+S\+ER}}~41
+\item 
+\#define \mbox{\hyperlink{cliente_8h_aca162232980dee2d78056fc244ac84fb}{E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}~42
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{cliente_8h_ad21ad484f18ec01d3365ce2b84d908df}{howto}} ()
+\begin{DoxyCompactList}\small\item\em Uso del programa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cliente_8h_aa5a5af881c83bd8bee44fb57fa2a14cd}{send\+\_\+error}} (int clntfd, char code)
+\begin{DoxyCompactList}\small\item\em Notifica al usuario cuando sucede algun error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definiciones/\+Mensajes del servidor y el cliente. 
+
+\begin{DoxyDate}{Date}
+11 Diciembre 2018 Se define la tabla de códigos del cliente y servidor, asi como de uso general y de error. 
+\end{DoxyDate}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cliente_8h_a89d2cc07bcfd585406a9b72e5bc5cc2e}\label{cliente_8h_a89d2cc07bcfd585406a9b72e5bc5cc2e}} 
+\index{cliente.\+h@{cliente.\+h}!A\+S\+K\+\_\+\+P\+OK@{A\+S\+K\+\_\+\+P\+OK}}
+\index{A\+S\+K\+\_\+\+P\+OK@{A\+S\+K\+\_\+\+P\+OK}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{A\+S\+K\+\_\+\+P\+OK}{ASK\_POK}}
+{\footnotesize\ttfamily \#define A\+S\+K\+\_\+\+P\+OK~10}
+
+(1B op) Pide por un Pokemon \mbox{\Hypertarget{cliente_8h_aa23e0976377944da5580519b4da13033}\label{cliente_8h_aa23e0976377944da5580519b4da13033}} 
+\index{cliente.\+h@{cliente.\+h}!B\+A\+IT@{B\+A\+IT}}
+\index{B\+A\+IT@{B\+A\+IT}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+IT}{BAIT}}
+{\footnotesize\ttfamily \#define B\+A\+IT~13}
+
+(1B op) Tira comida al Pokemon \mbox{\Hypertarget{cliente_8h_a56509f77cfe531ba3c43f75ad9fde5f0}\label{cliente_8h_a56509f77cfe531ba3c43f75ad9fde5f0}} 
+\index{cliente.\+h@{cliente.\+h}!B\+A\+LL@{B\+A\+LL}}
+\index{B\+A\+LL@{B\+A\+LL}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+LL}{BALL}}
+{\footnotesize\ttfamily \#define B\+A\+LL~11}
+
+(1B op) Tira pokebola al Pokemon \mbox{\Hypertarget{cliente_8h_a6c7cd32e1bac137f05e4a752b4ad10af}\label{cliente_8h_a6c7cd32e1bac137f05e4a752b4ad10af}} 
+\index{cliente.\+h@{cliente.\+h}!B\+U\+F\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+\_\+\+S\+I\+ZE}}
+\index{B\+U\+F\+F\+\_\+\+S\+I\+ZE@{B\+U\+F\+F\+\_\+\+S\+I\+ZE}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{B\+U\+F\+F\+\_\+\+S\+I\+ZE}{BUFF\_SIZE}}
+{\footnotesize\ttfamily \#define B\+U\+F\+F\+\_\+\+S\+I\+ZE~2049}
+
+Tamaño de Buffer \mbox{\Hypertarget{cliente_8h_ae0ff0bc911a0874c1ad8e2cc457a86a9}\label{cliente_8h_ae0ff0bc911a0874c1ad8e2cc457a86a9}} 
+\index{cliente.\+h@{cliente.\+h}!E\+N\+C\+O\+U\+N\+T\+ER@{E\+N\+C\+O\+U\+N\+T\+ER}}
+\index{E\+N\+C\+O\+U\+N\+T\+ER@{E\+N\+C\+O\+U\+N\+T\+ER}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{E\+N\+C\+O\+U\+N\+T\+ER}{ENCOUNTER}}
+{\footnotesize\ttfamily \#define E\+N\+C\+O\+U\+N\+T\+ER~21}
+
+(1B op, 1B id, 1B pb) Pokemon id con pb \mbox{\Hypertarget{cliente_8h_a7b028e7a92b26b4ac9251017cab404b2}\label{cliente_8h_a7b028e7a92b26b4ac9251017cab404b2}} 
+\index{cliente.\+h@{cliente.\+h}!E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON@{E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}}
+\index{E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON@{E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON}{END\_SESSION}}
+{\footnotesize\ttfamily \#define E\+N\+D\+\_\+\+S\+E\+S\+S\+I\+ON~32}
+
+(1B op) Termino de Sesion \mbox{\Hypertarget{cliente_8h_aca162232980dee2d78056fc244ac84fb}\label{cliente_8h_aca162232980dee2d78056fc244ac84fb}} 
+\index{cliente.\+h@{cliente.\+h}!E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}}
+\index{E\+R\+R\+O\+R\+\_\+\+C\+O\+DE@{E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{E\+R\+R\+O\+R\+\_\+\+C\+O\+DE}{ERROR\_CODE}}
+{\footnotesize\ttfamily \#define E\+R\+R\+O\+R\+\_\+\+C\+O\+DE~42}
+
+(1B op) El codigo no se esperaba \mbox{\Hypertarget{cliente_8h_afe4b0e625372cd38ec60150d6f5594b8}\label{cliente_8h_afe4b0e625372cd38ec60150d6f5594b8}} 
+\index{cliente.\+h@{cliente.\+h}!E\+S\+C\+A\+PE@{E\+S\+C\+A\+PE}}
+\index{E\+S\+C\+A\+PE@{E\+S\+C\+A\+PE}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{E\+S\+C\+A\+PE}{ESCAPE}}
+{\footnotesize\ttfamily \#define E\+S\+C\+A\+PE~22}
+
+(1B op) El Pokemon se escapo \mbox{\Hypertarget{cliente_8h_acb4b2d2375bcb113f12579d5752ac972}\label{cliente_8h_acb4b2d2375bcb113f12579d5752ac972}} 
+\index{cliente.\+h@{cliente.\+h}!M\+A\+X\+\_\+\+P\+OK@{M\+A\+X\+\_\+\+P\+OK}}
+\index{M\+A\+X\+\_\+\+P\+OK@{M\+A\+X\+\_\+\+P\+OK}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+P\+OK}{MAX\_POK}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+P\+OK~151}
+
+Pokemon máximos \mbox{\Hypertarget{cliente_8h_a996bde01ecac342918f0a2c4e7ce7bd5}\label{cliente_8h_a996bde01ecac342918f0a2c4e7ce7bd5}} 
+\index{cliente.\+h@{cliente.\+h}!NO@{NO}}
+\index{NO@{NO}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{NO}{NO}}
+{\footnotesize\ttfamily \#define NO~31}
+
+(1B op) Rechazar \mbox{\Hypertarget{cliente_8h_a8cb7f6dbcbac6fa53e6c935d8a9109f8}\label{cliente_8h_a8cb7f6dbcbac6fa53e6c935d8a9109f8}} 
+\index{cliente.\+h@{cliente.\+h}!N\+O\+\_\+\+T\+R\+I\+ES@{N\+O\+\_\+\+T\+R\+I\+ES}}
+\index{N\+O\+\_\+\+T\+R\+I\+ES@{N\+O\+\_\+\+T\+R\+I\+ES}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{N\+O\+\_\+\+T\+R\+I\+ES}{NO\_TRIES}}
+{\footnotesize\ttfamily \#define N\+O\+\_\+\+T\+R\+I\+ES~24}
+
+(1B op) Ya no hay mas pokebolas \mbox{\Hypertarget{cliente_8h_a0298d3a0b83fab9375b4df8d5e7e962a}\label{cliente_8h_a0298d3a0b83fab9375b4df8d5e7e962a}} 
+\index{cliente.\+h@{cliente.\+h}!N\+O\+\_\+\+U\+S\+ER@{N\+O\+\_\+\+U\+S\+ER}}
+\index{N\+O\+\_\+\+U\+S\+ER@{N\+O\+\_\+\+U\+S\+ER}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{N\+O\+\_\+\+U\+S\+ER}{NO\_USER}}
+{\footnotesize\ttfamily \#define N\+O\+\_\+\+U\+S\+ER~41}
+
+(1B op) No existe el usuario \mbox{\Hypertarget{cliente_8h_aba51915c87d64af47fb1cc59348961c9}\label{cliente_8h_aba51915c87d64af47fb1cc59348961c9}} 
+\index{cliente.\+h@{cliente.\+h}!OK@{OK}}
+\index{OK@{OK}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily \#define OK~30}
+
+(1B op) Aceptar \mbox{\Hypertarget{cliente_8h_a64f97b5cc35bcfe8119e5fecedb659a6}\label{cliente_8h_a64f97b5cc35bcfe8119e5fecedb659a6}} 
+\index{cliente.\+h@{cliente.\+h}!P\+O\+K\+E\+D\+EX@{P\+O\+K\+E\+D\+EX}}
+\index{P\+O\+K\+E\+D\+EX@{P\+O\+K\+E\+D\+EX}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{P\+O\+K\+E\+D\+EX}{POKEDEX}}
+{\footnotesize\ttfamily \#define P\+O\+K\+E\+D\+EX~25}
+
+(1B op, 151B pk) Se envia a pokedex \mbox{\Hypertarget{cliente_8h_ac5cc41d68017af4d6facb861094b07d4}\label{cliente_8h_ac5cc41d68017af4d6facb861094b07d4}} 
+\index{cliente.\+h@{cliente.\+h}!R\+O\+CK@{R\+O\+CK}}
+\index{R\+O\+CK@{R\+O\+CK}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{R\+O\+CK}{ROCK}}
+{\footnotesize\ttfamily \#define R\+O\+CK~12}
+
+(1B op) Tira piedra al Pokemon \mbox{\Hypertarget{cliente_8h_a35f69a612b07bbf1de53bbbd8d877c09}\label{cliente_8h_a35f69a612b07bbf1de53bbbd8d877c09}} 
+\index{cliente.\+h@{cliente.\+h}!R\+UN@{R\+UN}}
+\index{R\+UN@{R\+UN}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{R\+UN}{RUN}}
+{\footnotesize\ttfamily \#define R\+UN~14}
+
+(1B op) Escapa del encuentro \mbox{\Hypertarget{cliente_8h_a1692d123e0b7874155e61ae5bf1dbafa}\label{cliente_8h_a1692d123e0b7874155e61ae5bf1dbafa}} 
+\index{cliente.\+h@{cliente.\+h}!S\+E\+R\+V\+\_\+\+P\+O\+RT@{S\+E\+R\+V\+\_\+\+P\+O\+RT}}
+\index{S\+E\+R\+V\+\_\+\+P\+O\+RT@{S\+E\+R\+V\+\_\+\+P\+O\+RT}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{S\+E\+R\+V\+\_\+\+P\+O\+RT}{SERV\_PORT}}
+{\footnotesize\ttfamily \#define S\+E\+R\+V\+\_\+\+P\+O\+RT~9999}
+
+Puerto para conexion \mbox{\Hypertarget{cliente_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{cliente_8h_aa90cac659d18e8ef6294c7ae337f6b58}} 
+\index{cliente.\+h@{cliente.\+h}!S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}}
+\index{S\+U\+C\+C\+E\+SS@{S\+U\+C\+C\+E\+SS}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{S\+U\+C\+C\+E\+SS}{SUCCESS}}
+{\footnotesize\ttfamily \#define S\+U\+C\+C\+E\+SS~23}
+
+(1B op) El Pokemon se atrapo \mbox{\Hypertarget{cliente_8h_a45ba202b05caf39795aeca91b0ae547e}\label{cliente_8h_a45ba202b05caf39795aeca91b0ae547e}} 
+\index{cliente.\+h@{cliente.\+h}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+UT~40}
+
+(1B op) Hubo un timeout \mbox{\Hypertarget{cliente_8h_aceb62ec51949c10ff71a416925bf1e5f}\label{cliente_8h_aceb62ec51949c10ff71a416925bf1e5f}} 
+\index{cliente.\+h@{cliente.\+h}!T\+R\+Y\+\_\+\+U\+S\+ER@{T\+R\+Y\+\_\+\+U\+S\+ER}}
+\index{T\+R\+Y\+\_\+\+U\+S\+ER@{T\+R\+Y\+\_\+\+U\+S\+ER}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+Y\+\_\+\+U\+S\+ER}{TRY\_USER}}
+{\footnotesize\ttfamily \#define T\+R\+Y\+\_\+\+U\+S\+ER~15}
+
+(1B op,nB us) Conectar con el usuario us \mbox{\Hypertarget{cliente_8h_a8bfbbf31b7d3c07215440d18a064b7f4}\label{cliente_8h_a8bfbbf31b7d3c07215440d18a064b7f4}} 
+\index{cliente.\+h@{cliente.\+h}!U\+S\+ER@{U\+S\+ER}}
+\index{U\+S\+ER@{U\+S\+ER}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{U\+S\+ER}{USER}}
+{\footnotesize\ttfamily \#define U\+S\+ER~20}
+
+(1B op) Si existe el usuario 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{cliente_8h_ad21ad484f18ec01d3365ce2b84d908df}\label{cliente_8h_ad21ad484f18ec01d3365ce2b84d908df}} 
+\index{cliente.\+h@{cliente.\+h}!howto@{howto}}
+\index{howto@{howto}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{howto()}{howto()}}
+{\footnotesize\ttfamily int howto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uso del programa. 
+
+\begin{DoxyReturn}{Returns}
+...
+\end{DoxyReturn}
+Imprime el uso del programa en caso de ser necesario \mbox{\Hypertarget{cliente_8h_aa5a5af881c83bd8bee44fb57fa2a14cd}\label{cliente_8h_aa5a5af881c83bd8bee44fb57fa2a14cd}} 
+\index{cliente.\+h@{cliente.\+h}!send\+\_\+error@{send\+\_\+error}}
+\index{send\+\_\+error@{send\+\_\+error}!cliente.\+h@{cliente.\+h}}
+\subsubsection{\texorpdfstring{send\+\_\+error()}{send\_error()}}
+{\footnotesize\ttfamily void send\+\_\+error (\begin{DoxyParamCaption}\item[{int}]{clntfd,  }\item[{char}]{code }\end{DoxyParamCaption})}
+
+
+
+Notifica al usuario cuando sucede algun error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sockfd} & Descriptor de Archivo \\
+\hline
+{\em code} & Codigo de error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Void 
+\end{DoxyReturn}

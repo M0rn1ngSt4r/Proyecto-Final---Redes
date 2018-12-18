@@ -1,0 +1,77 @@
+.TH "clnt_hand.c" 3 "Mon Dec 17 2018" "Proyecto II - Servidor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+clnt_hand.c \- Definiciones/Mensajes del servidor y el cliente\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'servidor\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void * \fBerr_send\fP (int clntfd, char code)"
+.br
+.RI "Envia un codigo de error al cliente\&. "
+.ti -1c
+.RI "void * \fBhandle_client\fP (void *vargp)"
+.br
+.RI "Funcion que atiende al cliente\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definiciones/Mensajes del servidor y el cliente\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+11 Diciembre 2018 Aqui se atienden las peticiones del cliente\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void* err_send (int clntfd, char code)"
+
+.PP
+Envia un codigo de error al cliente\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIclntfd\fP Descriptor de archivo del cliente 
+.br
+\fIcode\fP El codigo de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL? 
+.RE
+.PP
+
+.SS "void* handle_client (void * vargp)"
+
+.PP
+Funcion que atiende al cliente\&. Corrobora que el usuario tenga su archivo correspondiente, obtiene los datos y comienza el ciclo de captura\&. Se validan las acciones del usuario, asi como si se capturan o no los pokemon, tambien se calcula si los pokemon escapan\&. (el conteo de las pokebolas igual)
+.PP
+Al final se pregunta si se quiere ver el pokedex del usuario en consola y se termina el thread\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIvargp\fP Descriptor de archivo (desde la creación del thread) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+NULL? 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Proyecto II - Servidor from the source code\&.

@@ -1,0 +1,201 @@
+.TH "cliente.h" 3 "Mon Dec 17 2018" "Proyecto II - Cliente" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cliente.h \- Definiciones/Mensajes del servidor y el cliente\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sys/socket\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/time\&.h>\fP
+.br
+\fC#include <netinet/in\&.h>\fP
+.br
+\fC#include <netdb\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <arpa/inet\&.h>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMAX_POK\fP   151"
+.br
+.ti -1c
+.RI "#define \fBSERV_PORT\fP   9999"
+.br
+.ti -1c
+.RI "#define \fBBUFF_SIZE\fP   2049"
+.br
+.ti -1c
+.RI "#define \fBASK_POK\fP   10"
+.br
+.ti -1c
+.RI "#define \fBBALL\fP   11"
+.br
+.ti -1c
+.RI "#define \fBROCK\fP   12"
+.br
+.ti -1c
+.RI "#define \fBBAIT\fP   13"
+.br
+.ti -1c
+.RI "#define \fBRUN\fP   14"
+.br
+.ti -1c
+.RI "#define \fBTRY_USER\fP   15"
+.br
+.ti -1c
+.RI "#define \fBUSER\fP   20"
+.br
+.ti -1c
+.RI "#define \fBENCOUNTER\fP   21"
+.br
+.ti -1c
+.RI "#define \fBESCAPE\fP   22"
+.br
+.ti -1c
+.RI "#define \fBSUCCESS\fP   23"
+.br
+.ti -1c
+.RI "#define \fBNO_TRIES\fP   24"
+.br
+.ti -1c
+.RI "#define \fBPOKEDEX\fP   25"
+.br
+.ti -1c
+.RI "#define \fBOK\fP   30"
+.br
+.ti -1c
+.RI "#define \fBNO\fP   31"
+.br
+.ti -1c
+.RI "#define \fBEND_SESSION\fP   32"
+.br
+.ti -1c
+.RI "#define \fBTIMEOUT\fP   40"
+.br
+.ti -1c
+.RI "#define \fBNO_USER\fP   41"
+.br
+.ti -1c
+.RI "#define \fBERROR_CODE\fP   42"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBhowto\fP ()"
+.br
+.RI "Uso del programa\&. "
+.ti -1c
+.RI "void \fBsend_error\fP (int clntfd, char code)"
+.br
+.RI "Notifica al usuario cuando sucede algun error\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definiciones/Mensajes del servidor y el cliente\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+11 Diciembre 2018 Se define la tabla de códigos del cliente y servidor, asi como de uso general y de error\&. 
+.RE
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ASK_POK   10"
+(1B op) Pide por un Pokemon 
+.SS "#define BAIT   13"
+(1B op) Tira comida al Pokemon 
+.SS "#define BALL   11"
+(1B op) Tira pokebola al Pokemon 
+.SS "#define BUFF_SIZE   2049"
+Tamaño de Buffer 
+.SS "#define ENCOUNTER   21"
+(1B op, 1B id, 1B pb) Pokemon id con pb 
+.SS "#define END_SESSION   32"
+(1B op) Termino de Sesion 
+.SS "#define ERROR_CODE   42"
+(1B op) El codigo no se esperaba 
+.SS "#define ESCAPE   22"
+(1B op) El Pokemon se escapo 
+.SS "#define MAX_POK   151"
+Pokemon máximos 
+.SS "#define NO   31"
+(1B op) Rechazar 
+.SS "#define NO_TRIES   24"
+(1B op) Ya no hay mas pokebolas 
+.SS "#define NO_USER   41"
+(1B op) No existe el usuario 
+.SS "#define OK   30"
+(1B op) Aceptar 
+.SS "#define POKEDEX   25"
+(1B op, 151B pk) Se envia a pokedex 
+.SS "#define ROCK   12"
+(1B op) Tira piedra al Pokemon 
+.SS "#define RUN   14"
+(1B op) Escapa del encuentro 
+.SS "#define SERV_PORT   9999"
+Puerto para conexion 
+.SS "#define SUCCESS   23"
+(1B op) El Pokemon se atrapo 
+.SS "#define TIMEOUT   40"
+(1B op) Hubo un timeout 
+.SS "#define TRY_USER   15"
+(1B op,nB us) Conectar con el usuario us 
+.SS "#define USER   20"
+(1B op) Si existe el usuario 
+.SH "Function Documentation"
+.PP 
+.SS "int howto ()"
+
+.PP
+Uso del programa\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\&.\&.\&.
+.RE
+.PP
+Imprime el uso del programa en caso de ser necesario 
+.SS "void send_error (int clntfd, char code)"
+
+.PP
+Notifica al usuario cuando sucede algun error\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIsockfd\fP Descriptor de Archivo 
+.br
+\fIcode\fP Codigo de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Void 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Proyecto II - Cliente from the source code\&.

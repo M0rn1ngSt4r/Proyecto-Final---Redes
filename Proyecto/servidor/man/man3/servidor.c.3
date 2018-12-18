@@ -1,0 +1,75 @@
+.TH "servidor.c" 3 "Mon Dec 17 2018" "Proyecto II - Servidor" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+servidor.c \- Programa del Servidor\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'servidor\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBerror\fP (char *errorMessage)"
+.br
+.RI "Función para el manejo de errores\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.RI "Función para establecer conexion con los clientes\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Programa del Servidor\&. 
+
+
+.PP
+\fBDate:\fP
+.RS 4
+11 Diciembre 2018 Se inicializa el socket, se define la dirección del puerto, y se crean los threads correspondientes a los clientes que piden conexion\&. 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void error (char * errorMessage)"
+
+.PP
+Función para el manejo de errores\&. Muestra un error del lado del servidor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIerrorMessage\fP El mensaje de error 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Void 
+.RE
+.PP
+
+.SS "int main (int argc, char ** argv)"
+
+.PP
+Función para establecer conexion con los clientes\&. Aqui se crea/inicia el socket para escuchar peticiones (ciclo infinito), cuendo se acepta un cliente, se crea un thread para poder tener varias conexiones a la vez y se empieza a atender al cliente\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIargc\fP Numero de argumentos 
+.br
+\fIargv\fP Argumentos en arreglo 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\&.\&.\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Proyecto II - Servidor from the source code\&.
